@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<title> Form </title>
+		<script type="text/javascript">
+			function valid()
+			{
+				var name=document.getElementById("name").value;
+				var num=document.getElementById("num").value;
+				if(name=="" || num.length!=10 )
+				{
+					alert("Enter details properly !!");
+					return false;
+				}
+				return true;
+			}
+		</script>
+	</head>
+	<body>
+		<form style="margin-left:150px;" action="form-back.php" method="POST">
+			<label> Name : </label> <br>
+			<input id="name" type="text" name="uname"> <br>
+
+			<label> Number : </label> <br>
+			<input id="num" type="number" name="unum"> <br> <br>
+
+			<input type="submit"  value="Submit" onclick="return valid()">
+		</form>
+	</body>
+</html>
