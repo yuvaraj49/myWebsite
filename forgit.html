@@ -1,0 +1,87 @@
+<html lang="en-US">
+	<head>
+		<title> Yuvaraj@25 </title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial scale=1.0">
+		<style>
+			.val {
+				background-color: aqua;
+				width: 22%;
+				height: 15%;
+				font-size:30px;
+				border-radius: 50%;
+			}
+			#disp {
+				width:68%;
+				height: 15%;
+				font-weight: bold;
+				font-size:45px;
+				border-radius: 10%;
+			}
+			form {
+				 background-image:linear-gradient(lightgreen,yellow,lightgreen);
+				 padding: 1%;
+				 margin-left: 10%;
+				 width:30%; 
+				 height: 55%;
+				 border-radius: 8%;
+				 border-style:solid;
+				 border-color:black; 
+			}
+			@media (max-width:600px)
+			{
+				form
+				{
+					width: 80%;
+				}
+			}
+			.oper,.sel {
+				background-color:grey;
+				width: 22%;
+				height: 15%;
+				font-size:30px;
+				border-radius: 50%;
+			}
+		</style>
+		<script>
+			function del()
+			{
+				var value=document.getElementById("disp").value;
+				document.getElementById("disp").value=value.substr(0,value.length-1);
+			}
+		</script>
+	</head>
+	<body bgcolor="lightblue">
+		<h1> Gitcontent </h1>
+		<details>
+			<summary> Click here </summary>
+			<ul>
+				<li> This is a simple calculator using HTML, CSS</li>
+			</ul>
+		</details>
+		<br>
+		<form name="fm">
+			<input type="text" id="disp" name="box">
+			<input type="button" class="oper" value="<=" onclick="del();">	<br> <br>
+			<input type="button" class="val" value="7" onclick="fm.box.value+=7">
+			<input type="button" class="val" value="8" onclick="fm.box.value+=8">	
+			<input type="button" class="val" value="9" onclick="fm.box.value+=9">  
+			<input type="button" class="oper" value="+" onclick="fm.box.value+='+'">  <br> <br>
+
+			<input type="button" class="val" value="4" onclick="fm.box.value+=4">
+			<input type="button" class="val" value="5" onclick="fm.box.value+=5">
+			<input type="button" class="val" value="6" onclick="fm.box.value+=6"> 
+			<input type="button" class="oper" value="-" onclick="fm.box.value+='-'"> <br> <br>
+
+			<input type="button" class="val" value="1" onclick="fm.box.value+=1">
+			<input type="button" class="val" value="2" onclick="fm.box.value+=2">
+			<input type="button" class="val" value="3" onclick="fm.box.value+=3">
+			<input type="button" class="oper" value="*" onclick="fm.box.value+='*'"> <br><br>
+
+			<input type="button" class="val" value="0" onclick="fm.box.value+=0">
+			<input type="button" class="sel" value="=" onclick="fm.box.value=eval(fm.box.value)">
+			<input type="button" class="oper" value="/" onclick="fm.box.value+='/'">
+			<input type="button" class="sel" value="CE" onclick="fm.box.value=''">
+		</form>
+	</body>
+</html>
