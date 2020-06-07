@@ -1,0 +1,162 @@
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial scale=1.0">
+		<title> Ludo </title>
+		<style type="text/css">
+			body {
+				background-color: black;
+				color: white;
+			}
+			#outtable {
+				border: 2px solid white;
+				width:50%;
+				margin-left:25%;
+				height: 60%;
+			}
+			#t1 {
+				width: 100%;
+				height: 100%;
+			}
+			#t1,#t1 td {
+				border:1px solid yellow;
+				text-align: center;
+			}
+			#yb1,#yr1,#rg1,#bg1{
+				width:100%;
+				height: 100%;
+			}
+			#yb1 td,#yr1 td, #rg1 td,#bg1 td {
+				border: 1px solid white;
+				text-align: center;
+			}
+			#t2 {
+				width: 100%;
+				height: 100%; 
+			}
+			#t2,#t2 td {
+				border:1px solid blue;
+				text-align: center;
+			}
+			#t3 {
+				width: 100%;
+				height: 100%;
+			}
+			#t3,#t3 td {
+				border:1px solid red;
+				text-align: center;
+			}
+			#t4 {
+				width: 100%;
+				height: 100%;
+			}
+			#t4,#t4 td {
+				border:1px solid green;
+				text-align: center;
+			}
+			#y1,#y2,#y3,#y4,#bl1,#bl2,#bl3,#bl4,#r1,#r2,#r3,#r4,#g1,#g2,#g3,#g4 {
+				width: 70%;
+				height: 70%;
+				font-size: 100%;
+				font-weight: bold;
+			}
+			#l1, #l2, #dice {
+				font-family: verdana;
+				font-weight: bold;
+				margin-left: 45%;
+			}
+			#number {
+				width: 5%;
+				height: 8%;
+				margin-left: 47%;
+				border-radius: 20%;
+			}
+			@media (max-width:600px) {
+				#outtable {
+					width: 70%;
+					margin-left: 2%;
+				}
+				#l1, #dice {
+					margin-left: 30%;
+				}
+				#number {
+					width: 10%;
+					height: 7%;
+					margin-left: 35%;
+				}
+			}
+		</style>
+		<script type="text/javascript" src="ludo gameplay.js">
+		</script>
+	</head>
+	<body onload="color()">
+		<h1> Ludo </h1>
+		<table id="outtable">
+			<tr> <td>
+			<table id="t1">
+				<tr> <td> <button id="y1"> 1 </button> </td> <td> <button id="y2"> 2 </button> </td> </tr>
+				<tr> <td> <button id="y3"> 3 </button> </td> <td> <button id="y4"> 4 </button> </td> </tr>
+			</table> </td>
+			<td>
+				<table id="yb1">
+					<tr> <td id="ap1"> <button id="a1"> &nbsp; </button> </td> <td id="ap2"> <button id="a2"> &nbsp; </button> </td> <td id="ap3"> <button id="a3"> &nbsp; </button> </td> </tr>
+					<tr> <td id="ap4"> <button id="a4"> &nbsp; </button> </td> <td id="ap5"> <button id="a5"> &nbsp; </button> </td> <td id="ap6"> <button id="a6"> &nbsp; </button> </td> </tr>
+					<tr> <td id="ap7"> <button id="a7"> &nbsp; </button> </td> <td id="ap8"> <button id="a8"> &nbsp; </button> </td> <td id="ap9"> <button id="a9"> &nbsp; </button> </td> </tr>
+					<tr> <td id="ap10"> <button id="a10"> &nbsp; </button> </td> <td id="ap11"> <button id="a11"> &nbsp; </button> </td> <td id="ap12"> <button id="a12"> &nbsp; </button> </td> </tr>
+					<tr> <td id="ap13"> <button id="a13"> &nbsp; </button> </td> <td id="ap14"> <button id="a14"> &nbsp; </button> </td> <td id="ap15"> <button id="a15"> &nbsp; </button> </td> </tr>
+					<tr> <td id="ap16"> <button id="a16"> &nbsp; </button> </td> <td id="ap17"> <button id="a17"> &nbsp; </button> </td> <td id="ap18"> <button id="a18"> &nbsp; </button> </td> </tr>
+				</table>
+			</td>
+			<td>
+			<table id="t2">
+				<tr> <td> <button id="bl1"> 1 </button> </td> <td> <button id="bl2"> 2 </button> </td> </tr>
+				<tr> <td> <button id="bl3"> 3 </button> </td> <td> <button id="bl4"> 4 </button> </td> </tr>
+			</table> </td>
+			</tr>
+			<tr>
+				<td> 
+					<table id="yr1">
+						<tr> <td id="bp1"> <button id="b1"> &nbsp; </button> </td> <td id="bp2"> <button id="b2"> &nbsp; </button> </td> <td id="bp3"> <button id="b3"> &nbsp; </button> </td> <td id="bp4"> <button id="b4"> &nbsp; </button> </td> <td id="bp5"> <button id="b5"> &nbsp; </button> </td> <td id="bp6"> <button id="b6"> &nbsp; </button> </td> </tr>
+						<tr> <td id="bp7"> <button id="b7"> &nbsp; </button> </td> <td id="bp8"> <button id="b8"> &nbsp; </button> </td> <td id="bp9"> <button id="b9"> &nbsp; </button> </td> <td id="bp10"> <button id="b10"> &nbsp; </button> </td> <td id="bp11"> <button id="b11"> &nbsp; </button> </td> <td id="bp12"> <button id="b12"> &nbsp; </button> </td> </tr>
+						<tr> <td id="bp13"> <button id="b13"> &nbsp; </button> </td> <td id="bp14"> <button id="b14"> &nbsp; </button> </td> <td id="bp15"> <button id="b15"> &nbsp; </button> </td> <td id="bp16"> <button id="b16"> &nbsp; </button> </td> <td id="bp17"> <button id="b17"> &nbsp; </button> </td> <td id="bp18"> <button id="b18"> &nbsp; </button> </td> </tr>
+					</table>
+				</td>
+				<td> 
+
+				</td> 
+				<td>
+					<table id="bg1">
+						<tr> <td id="cp1"> <button id="c1"> &nbsp; </button> </td> <td id="cp2"> <button id="c2"> &nbsp; </button> </td> <td id="cp3"> <button id="c3"> &nbsp; </button> </td> <td id="cp4"> <button id="c4"> &nbsp; </button> </td> <td id="cp5"> <button id="c5"> &nbsp; </button> </td> <td id="cp6"> <button id="c6"> &nbsp; </button> </td> </tr>
+						<tr> <td id="cp7"> <button id="c7"> &nbsp; </button> </td> <td id="cp8"> <button id="c8"> &nbsp; </button> </td> <td id="cp9"> <button id="c9"> &nbsp; </button> </td> <td id="cp10"> <button id="c10"> &nbsp; </button> </td> <td id="cp11"> <button id="c11"> &nbsp; </button> </td> <td id="cp12"> <button id="c12"> &nbsp; </button> </td> </tr>
+						<tr> <td id="cp13"> <button id="c13"> &nbsp; </button> </td> <td id="cp14"> <button id="c14"> &nbsp; </button> </td> <td id="cp15"> <button id="c15"> &nbsp; </button> </td> <td id="cp16"> <button id="c16"> &nbsp; </button> </td> <td id="cp17"> <button id="c17"> &nbsp; </button> </td> <td id="cp18"> <button id="c18"> &nbsp; </button> </td> </tr>
+					</table>
+				</td>
+			</tr>
+			<tr> <td>
+			<table id="t3">
+				<tr> <td> <button id="r1"> 1 </button> </td> <td> <button id="r2"> 2 </button> </td> </tr>
+				<tr> <td> <button id="r3"> 3 </button> </td> <td> <button id="r4"> 4 </button> </td> </tr>
+			</table> </td>
+			<td>
+				<table id="rg1">
+					<tr> <td id="dp1"> <button id="d1"> &nbsp; </button> </td> <td id="dp2"> <button id="d2"> &nbsp; </button> </td> <td id="dp3"> <button id="d3"> &nbsp; </button> </td> </tr>
+					<tr> <td id="dp4"> <button id="d4"> &nbsp; </button> </td> <td id="dp5"> <button id="d5"> &nbsp; </button> </td> <td id="dp6"> <button id="d6"> &nbsp; </button> </td> </tr>
+					<tr> <td id="dp7"> <button id="d7"> &nbsp; </button> </td> <td id="dp8"> <button id="d8"> &nbsp; </button> </td> <td id="dp9"> <button id="d9"> &nbsp; </button> </td> </tr>
+					<tr> <td id="dp10"> <button id="d10"> &nbsp; </button> </td> <td id="dp11"> <button id="d11"> &nbsp; </button> </td> <td id="dp12"> <button id="d12"> &nbsp; </button> </td> </tr>
+					<tr> <td id="dp13"> <button id="d13"> &nbsp; </button> </td> <td id="dp14"> <button id="d14"> &nbsp; </button> </td> <td id="dp15"> <button id="d15"> &nbsp; </button> </td> </tr>
+					<tr> <td id="dp16"> <button id="d16"> &nbsp; </button> </td> <td id="dp17"> <button id="d17"> &nbsp; </button> </td> <td id="dp18"> <button id="d18"> &nbsp; </button> </td> </tr>
+				</table>
+			</td>
+			<td>
+			<table id="t4">
+				<tr> <td> <button id="g1"> 1 </button> </td> <td> <button id="g2"> 2 </button> </td> </tr>
+				<tr> <td> <button id="g3"> 3 </button> </td> <td> <button id="g4"> 4 </button> </td> </tr>
+			</table> </td>
+			</tr>
+		</table>
+		<br><br>
+		<label id="l1"> Turn of player 1 </label> <br>
+		<button id="dice" onclick="roll()"> Click here to Roll </button> <br> <br>
+		<img id="number" src="dice-2.jpg">
+	</body>
+</html>
